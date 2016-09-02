@@ -1,0 +1,18 @@
+<template name="task">
+  <li class="{{#if checked}}checked{{/if}}">
+    {{#if isOwner}}
+      <input type="checkbox" name="checkbox" class="checkbox" checked="{{checked}}" />
+      <button class="privateButton">
+        {{#if private}}
+          <span>Private</span>
+        {{else}}
+          <span>Public</span>
+        {{/if}}
+      </button>
+    {{/if}}
+    {{#if isOwner}}
+      <button type="button" name="deleteButton" class="oneTask">Delete</button>
+    {{/if}}
+    <span class="text">{{title}}</span>
+  </li>
+</template>
